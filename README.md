@@ -1,12 +1,10 @@
-# CoinTanda Prize Savings Protocol - RNG Service
-
-[![Coverage Status](https://coveralls.io/repos/github/cointanda/rng-service/badge.svg?branch=master)](https://coveralls.io/github/cointanda/rng-service?branch=master)
+# Think and Dev Prize Savings Protocol - RNG Service
 
 [![built-with openzeppelin](https://img.shields.io/badge/built%20with-OpenZeppelin-3677FF)](https://docs.openzeppelin.com/)
 
-The [CoinTanda](https://www.cointanda.com/) Prize Savings Protocol Ethereum smart contracts.
+The [Think and Dev](https://www.thinkanddev.com/) Prize Savings Protocol Ethereum smart contracts.
 
-See the [documentation](https://docs.cointanda.com/protocol/random-number-generator)
+See the [documentation](https://docs.pooltogether.com/protocol/random-number-generator)
 
 # Deployments
 

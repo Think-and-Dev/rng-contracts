@@ -1,8 +1,8 @@
 {
-  "name": "@cointanda/cointanda-rng-contracts",
-  "author": "CoinTanda, Inc.",
+  "name": "@thinkanddev/rng-contracts",
+  "author": "Think and Dev",
   "version": "1.0.0-alpha.9",
-  "description": "CoinTanda RNG Service Smart Contracts",
+  "description": "Think and Dev RNG Service Smart Contracts",
   "license": "GPL-3.0",
   "main": "index.js",
   "scripts": {

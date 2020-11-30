@@ -7,10 +7,13 @@ import "@openzeppelin/contracts/math/SafeMath.sol";
 import "@openzeppelin/contracts/utils/SafeCast.sol";
 
 import "./RNGInterface.sol";
+import "./IBlockHeaderPrecompiledContract.sol";
 
 contract RNGBlockhash is RNGInterface, Ownable {
   using SafeMath for uint256;
   using SafeCast for uint256;
+  IBlockHeaderPrecompiledContract public blockHeaderContract = IBlockHeaderPrecompiledContract(0x0000000000000000000000000000000001000010);
+  uint32 public confirmations = 12;
 
   /// @dev A counter for the number of requests made used for request ids
   uint32 internal requestCount;
@@ -77,7 +80,7 @@ contract RNGBlockhash is RNGInterface, Ownable {
   /// @param requestId The ID of the request used to get the results of the RNG service
   /// @return True if the request has completed and a random number is available, false otherwise
   function _isRequestComplete(uint32 requestId) internal view returns (bool) {
-    return block.number > (requestLockBlock[requestId] + 1);
+    return block.number > (requestLockBlock[requestId] + confirmations);
   }
 
   /// @dev Gets the next consecutive request ID to be used
@@ -90,7 +93,10 @@ contract RNGBlockhash is RNGInterface, Ownable {
   /// @dev Gets a seed for a random number from the latest available blockhash
   /// @return seed The seed to be used for generating a random number
   function _getSeed() internal virtual view returns (uint256 seed) {
-    return uint256(blockhash(block.number - 1));
+    bytes memory header = blockHeaderContract.getBitcoinHeader(int256(block.number - confirmations));
+    bytes32 headerHash = sha256(header);
+    bytes32 random = keccak256(abi.encodePacked(headerHash, blockhash(block.number - confirmations)));
+    return uint256(random);
   }
 
   /// @dev Stores the latest random number by request ID and logs the event
@@ -102,4 +108,5 @@ contract RNGBlockhash is RNGInterface, Ownable {
 
     emit RandomNumberCompleted(requestId, result);
   }
+
 }

@@ -13,4 +13,5 @@ coverage.json
 .oz-migrate/dev-*
 test-results.xml
 deployments/local*
+deployments/rskregtest*
 .DS_Store

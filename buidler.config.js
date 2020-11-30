@@ -38,8 +38,31 @@ module.exports = {
       blockGasLimit: 200000000,
       allowUnlimitedContractSize: true
     },
-    localhost: {
-      url: 'http://127.0.0.1:8545'
+    rskregtest: {
+      url: 'http://127.0.0.1:4444',
+      blockGasLimit: 68000000,
+      allowUnlimitedContractSize: false,
+      chainId: 33
+    },
+    rsktestnet: {
+      url: 'https://public-node.testnet.rsk.co',
+      blockGasLimit: 68000000,
+      gasPrice: 75000000,
+      allowUnlimitedContractSize: false,
+      chainId: 31,
+      accounts: {
+        mnemonic: process.env.HDWALLET_MNEMONIC
+      }
+    },
+    rskmainnet: {
+      url: 'https://public-node.rsk.co',
+      blockGasLimit: 68000000,
+      gasPrice: 70000000,
+      allowUnlimitedContractSize: false,
+      chainId: 30,
+      accounts: {
+        mnemonic: process.env.HDWALLET_MNEMONIC
+      }
     },
     // kovan: {
     //   url: `https://kovan.infura.io/v3/${process.env.INFURA_API_KEY}`,
@@ -86,7 +109,8 @@ module.exports = {
     linkToken: {
       1: '0x514910771AF9Ca656af840dff83E8264EcF986CA', // mainnet
       4: '0x01BE23585060835E02B77ef475b0Cc51aA1e0709', // rinkeby
-      42: '0xa36085F69e2889c224210F603D836748e7dC0088', // kovan
+      42: '0xa36085F69e2889c224210F603D836748e7dC0088', // kovan,
+      31: '0x8bbbd80981fe76d44854d8df305e8985c19f0e78', // Rsk Testnet
     }
   }
 };
