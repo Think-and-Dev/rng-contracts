@@ -80,7 +80,7 @@ contract RNGBlockhash is RNGInterface, Ownable {
   /// @param requestId The ID of the request used to get the results of the RNG service
   /// @return True if the request has completed and a random number is available, false otherwise
   function _isRequestComplete(uint32 requestId) internal view returns (bool) {
-    return block.number > (requestLockBlock[requestId] + confirmations);
+    return block.number > (requestLockBlock[requestId] + confirmations) && requestId <= requestCount && requestId > 0;
   }
 
   /// @dev Gets the next consecutive request ID to be used
