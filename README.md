@@ -2,15 +2,15 @@
 
 [![built-with openzeppelin](https://img.shields.io/badge/built%20with-OpenZeppelin-3677FF)](https://docs.openzeppelin.com/)
 
-The [Think and Dev](https://www.thinkanddev.com/) Prize Savings Protocol Ethereum smart contracts.
+The [Think and Dev](https://www.thinkanddev.com/) Prize Savings Protocol Rsk smart contracts.
 
 See the [documentation](https://docs.pooltogether.com/protocol/random-number-generator)
 
 # Deployments
 
-The Chainlink RNG is supported on mainnet, rinkeby and kovan.
+The Chainlink RNG is currently not supported.
 
-The Blockhash RNG is supported on mainnet, rinkeby, kovan, and ropsten.
+The Blockhash RNG is supported on Rsk Mainnet and Rsk Testnet.
 
 # Setup
 
@@ -59,15 +59,8 @@ You can deploy using the deploy script:
 $ yarn deploy [network]
 ```
 
-Where [network] can be `mainnet`, `rinkeby`, `ropsten`, or `kovan`.
+Where [network] can be `rskmainnet`, `rsktestnet`, `rskregtest`.
 
-Now you should verify the contracts on Etherscan:
-
-```sh
-$ yarn etherscan-verify [network]
-```
-
-The network option is the same as above.
 
 # Development
 
@@ -106,7 +99,6 @@ Start Local TestRPC & Deploy
 ```sh
 $ yarn start
 ```
-
-Deploy to an Ethereum Network
-
+# Already deployed contracts
+Rsk Testnet:[ 0x2ad445b0efcb337db6682f6b904f0263bae85509](https://explorer.testnet.rsk.co/address/0x2ad445b0efcb337db6682f6b904f0263bae85509?__ctab=general)
 
