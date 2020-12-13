@@ -95,7 +95,7 @@ contract RNGBlockhash is RNGInterface, Ownable {
   function _getSeed() internal virtual view returns (uint256 seed) {
     bytes memory header = blockHeaderContract.getBitcoinHeader(int256(block.number - confirmations));
     bytes32 headerHash = sha256(header);
-    bytes32 random = keccak256(abi.encodePacked(headerHash, blockhash(block.number - confirmations)));
+    bytes32 random = sha256(abi.encodePacked(headerHash));
     return uint256(random);
   }
 

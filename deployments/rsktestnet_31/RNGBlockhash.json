@@ -1,418 +1,418 @@
-  {
-    "abi": [
+{
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint32",
+          "name": "requestId",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "randomNumber",
+          "type": "uint256"
+        }
+      ],
+      "name": "RandomNumberCompleted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint32",
+          "name": "requestId",
+          "type": "uint32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        }
+      ],
+      "name": "RandomNumberRequested",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "blockHeaderContract",
+      "outputs": [
+        {
+          "internalType": "contract IBlockHeaderPrecompiledContract",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "confirmations",
+      "outputs": [
+        {
+          "internalType": "uint32",
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getLastRequestId",
+      "outputs": [
+        {
+          "internalType": "uint32",
+          "name": "requestId",
+          "type": "uint32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getRequestFee",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "feeToken",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "requestFee",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "requestId",
+          "type": "uint32"
+        }
+      ],
+      "name": "isRequestComplete",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "isCompleted",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "requestId",
+          "type": "uint32"
+        }
+      ],
+      "name": "randomNumber",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "randomNum",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "requestRandomNumber",
+      "outputs": [
+        {
+          "internalType": "uint32",
+          "name": "requestId",
+          "type": "uint32"
+        },
+        {
+          "internalType": "uint32",
+          "name": "lockBlock",
+          "type": "uint32"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "receipt": {
+    "to": null,
+    "from": "0x9C95B0EF2D3E1D9ca479524Ba738C87BE28C1585",
+    "contractAddress": "0x4204c5a6962e65C3b3f61a078DD6Fe89Db02A578",
+    "transactionIndex": 0,
+    "gasUsed": "771667",
+    "logsBloom": "0x00000000200000000000000000000000000000000000000000800000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000001000000008000000000000000000000000000020000000000000000000800000000000000000000000000000000400000000000000000000000000008000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000001000000000000",
+    "blockHash": "0xf7db725de175a27ac0311dc38a60cb3941cda27d3d38768c8d5dc6980ad7c570",
+    "transactionHash": "0x761bd514f0743a16e332a2539531a7db537317081e44be04bc54084a1cb706d8",
+    "logs": [
       {
-        "inputs": [],
-        "stateMutability": "nonpayable",
-        "type": "constructor"
-      },
-      {
-        "anonymous": false,
-        "inputs": [
-          {
-            "indexed": true,
-            "internalType": "address",
-            "name": "previousOwner",
-            "type": "address"
-          },
-          {
-            "indexed": true,
-            "internalType": "address",
-            "name": "newOwner",
-            "type": "address"
-          }
+        "transactionIndex": 0,
+        "blockNumber": 1422686,
+        "transactionHash": "0x761bd514f0743a16e332a2539531a7db537317081e44be04bc54084a1cb706d8",
+        "address": "0x4204c5a6962e65C3b3f61a078DD6Fe89Db02A578",
+        "topics": [
+          "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0",
+          "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "0x0000000000000000000000009c95b0ef2d3e1d9ca479524ba738c87be28c1585"
         ],
-        "name": "OwnershipTransferred",
-        "type": "event"
-      },
-      {
-        "anonymous": false,
-        "inputs": [
-          {
-            "indexed": true,
-            "internalType": "uint32",
-            "name": "requestId",
-            "type": "uint32"
-          },
-          {
-            "indexed": false,
-            "internalType": "uint256",
-            "name": "randomNumber",
-            "type": "uint256"
-          }
-        ],
-        "name": "RandomNumberCompleted",
-        "type": "event"
-      },
-      {
-        "anonymous": false,
-        "inputs": [
-          {
-            "indexed": true,
-            "internalType": "uint32",
-            "name": "requestId",
-            "type": "uint32"
-          },
-          {
-            "indexed": true,
-            "internalType": "address",
-            "name": "sender",
-            "type": "address"
-          }
-        ],
-        "name": "RandomNumberRequested",
-        "type": "event"
-      },
-      {
-        "inputs": [],
-        "name": "blockHeaderContract",
-        "outputs": [
-          {
-            "internalType": "contract IBlockHeaderPrecompiledContract",
-            "name": "",
-            "type": "address"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [],
-        "name": "confirmations",
-        "outputs": [
-          {
-            "internalType": "uint32",
-            "name": "",
-            "type": "uint32"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [],
-        "name": "getLastRequestId",
-        "outputs": [
-          {
-            "internalType": "uint32",
-            "name": "requestId",
-            "type": "uint32"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [],
-        "name": "getRequestFee",
-        "outputs": [
-          {
-            "internalType": "address",
-            "name": "feeToken",
-            "type": "address"
-          },
-          {
-            "internalType": "uint256",
-            "name": "requestFee",
-            "type": "uint256"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "uint32",
-            "name": "requestId",
-            "type": "uint32"
-          }
-        ],
-        "name": "isRequestComplete",
-        "outputs": [
-          {
-            "internalType": "bool",
-            "name": "isCompleted",
-            "type": "bool"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [],
-        "name": "owner",
-        "outputs": [
-          {
-            "internalType": "address",
-            "name": "",
-            "type": "address"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "uint32",
-            "name": "requestId",
-            "type": "uint32"
-          }
-        ],
-        "name": "randomNumber",
-        "outputs": [
-          {
-            "internalType": "uint256",
-            "name": "randomNum",
-            "type": "uint256"
-          }
-        ],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "inputs": [],
-        "name": "renounceOwnership",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "inputs": [],
-        "name": "requestRandomNumber",
-        "outputs": [
-          {
-            "internalType": "uint32",
-            "name": "requestId",
-            "type": "uint32"
-          },
-          {
-            "internalType": "uint32",
-            "name": "lockBlock",
-            "type": "uint32"
-          }
-        ],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "address",
-            "name": "newOwner",
-            "type": "address"
-          }
-        ],
-        "name": "transferOwnership",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
+        "data": "0x",
+        "logIndex": 0,
+        "blockHash": "0xf7db725de175a27ac0311dc38a60cb3941cda27d3d38768c8d5dc6980ad7c570"
       }
     ],
-    "receipt": {
-      "to": null,
-      "from": "0x9C95B0EF2D3E1D9ca479524Ba738C87BE28C1585",
-      "contractAddress": "0x2aD445b0EFcb337Db6682F6B904f0263BaE85509",
-      "transactionIndex": 0,
-      "gasUsed": "729407",
-      "logsBloom": "0x00000000200000000000000000000000000000000000000000800000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000020000000000000000000800000000000000000000002000000000400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000010000000000000000000000000020000000000000000000000000000000000000000000000000000001000000000000",
-      "blockHash": "0x7002d80ba5ad616e65d7d6a49cdec2f01a1da44f65b933b601bdaf114ec5b965",
-      "transactionHash": "0x5589696324490aac14347678da2071199b0c0ddac0f6271a8db55395e591dab2",
-      "logs": [
-        {
-          "transactionIndex": 0,
-          "blockNumber": 1404393,
-          "transactionHash": "0x5589696324490aac14347678da2071199b0c0ddac0f6271a8db55395e591dab2",
-          "address": "0x2aD445b0EFcb337Db6682F6B904f0263BaE85509",
-          "topics": [
-            "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0",
-            "0x0000000000000000000000000000000000000000000000000000000000000000",
-            "0x0000000000000000000000009c95b0ef2d3e1d9ca479524ba738c87be28c1585"
-          ],
-          "data": "0x",
-          "logIndex": 0,
-          "blockHash": "0x7002d80ba5ad616e65d7d6a49cdec2f01a1da44f65b933b601bdaf114ec5b965"
+    "blockNumber": 1422686,
+    "cumulativeGasUsed": "771667",
+    "status": 1,
+    "byzantium": true
+  },
+  "address": "0x4204c5a6962e65C3b3f61a078DD6Fe89Db02A578",
+  "args": [],
+  "solcInputHash": "0x86672b3d0e668f08da1b1a1e485621dcb824719488bb1aeb252af4f60a644b52",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.6+commit.6c089d02\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint32\",\"name\":\"requestId\",\"type\":\"uint32\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"randomNumber\",\"type\":\"uint256\"}],\"name\":\"RandomNumberCompleted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint32\",\"name\":\"requestId\",\"type\":\"uint32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RandomNumberRequested\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"blockHeaderContract\",\"outputs\":[{\"internalType\":\"contract IBlockHeaderPrecompiledContract\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"confirmations\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getLastRequestId\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"requestId\",\"type\":\"uint32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getRequestFee\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"feeToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"requestFee\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"requestId\",\"type\":\"uint32\"}],\"name\":\"isRequestComplete\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"isCompleted\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"requestId\",\"type\":\"uint32\"}],\"name\":\"randomNumber\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"randomNum\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"requestRandomNumber\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"requestId\",\"type\":\"uint32\"},{\"internalType\":\"uint32\",\"name\":\"lockBlock\",\"type\":\"uint32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"isRequestComplete(uint32)\":{\"details\":\"For time-delayed requests, this function is used to check/confirm completion\",\"params\":{\"requestId\":\"The ID of the request used to get the results of the RNG service\"},\"returns\":{\"isCompleted\":\"True if the request has completed and a random number is available, false otherwise\"}},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"randomNumber(uint32)\":{\"params\":{\"requestId\":\"The ID of the request used to get the results of the RNG service\"},\"returns\":{\"randomNum\":\"The random number\"}},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"requestRandomNumber()\":{\"details\":\"Some services will complete the request immediately, others may have a time-delaySome services require payment in the form of a token, such as $LINK for Chainlink VRF\",\"returns\":{\"lockBlock\":\"The block number at which the RNG service will start generating time-delayed randomness.  The calling contract should \\\"lock\\\" all activity until the result is available via the `requestId`\",\"requestId\":\"The ID of the request used to get the results of the RNG service\"}},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}}},\"userdoc\":{\"methods\":{\"constructor\":\"Public constructor\",\"getLastRequestId()\":{\"notice\":\"Gets the last request id used by the RNG service\"},\"getRequestFee()\":{\"notice\":\"Gets the Fee for making a Request against an RNG service\"},\"isRequestComplete(uint32)\":{\"notice\":\"Checks if the request for randomness from the 3rd-party service has completed\"},\"randomNumber(uint32)\":{\"notice\":\"Gets the random number produced by the 3rd-party service\"},\"requestRandomNumber()\":{\"notice\":\"Sends a request for a random number to the 3rd-party service\"}}}},\"settings\":{\"compilationTarget\":{\"contracts/RNGBlockhash.sol\":\"RNGBlockhash\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/GSN/Context.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.6.0;\\n\\n/*\\n * @dev Provides information about the current execution context, including the\\n * sender of the transaction and its data. While these are generally available\\n * via msg.sender and msg.data, they should not be accessed in such a direct\\n * manner, since when dealing with GSN meta-transactions the account sending and\\n * paying for execution may not be the actual sender (as far as an application\\n * is concerned).\\n *\\n * This contract is only required for intermediate, library-like contracts.\\n */\\nabstract contract Context {\\n    function _msgSender() internal view virtual returns (address payable) {\\n        return msg.sender;\\n    }\\n\\n    function _msgData() internal view virtual returns (bytes memory) {\\n        this; // silence state mutability warning without generating bytecode - see https://github.com/ethereum/solidity/issues/2691\\n        return msg.data;\\n    }\\n}\\n\",\"keccak256\":\"0xdb26cbf4d028490f49831a7865c2fe1b28db44b535ca8d343785a3b768aae183\"},\"@openzeppelin/contracts/access/Ownable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.6.0;\\n\\nimport \\\"../GSN/Context.sol\\\";\\n/**\\n * @dev Contract module which provides a basic access control mechanism, where\\n * there is an account (an owner) that can be granted exclusive access to\\n * specific functions.\\n *\\n * By default, the owner account will be the one that deploys the contract. This\\n * can later be changed with {transferOwnership}.\\n *\\n * This module is used through inheritance. It will make available the modifier\\n * `onlyOwner`, which can be applied to your functions to restrict their use to\\n * the owner.\\n */\\ncontract Ownable is Context {\\n    address private _owner;\\n\\n    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);\\n\\n    /**\\n     * @dev Initializes the contract setting the deployer as the initial owner.\\n     */\\n    constructor () internal {\\n        address msgSender = _msgSender();\\n        _owner = msgSender;\\n        emit OwnershipTransferred(address(0), msgSender);\\n    }\\n\\n    /**\\n     * @dev Returns the address of the current owner.\\n     */\\n    function owner() public view returns (address) {\\n        return _owner;\\n    }\\n\\n    /**\\n     * @dev Throws if called by any account other than the owner.\\n     */\\n    modifier onlyOwner() {\\n        require(_owner == _msgSender(), \\\"Ownable: caller is not the owner\\\");\\n        _;\\n    }\\n\\n    /**\\n     * @dev Leaves the contract without owner. It will not be possible to call\\n     * `onlyOwner` functions anymore. Can only be called by the current owner.\\n     *\\n     * NOTE: Renouncing ownership will leave the contract without an owner,\\n     * thereby removing any functionality that is only available to the owner.\\n     */\\n    function renounceOwnership() public virtual onlyOwner {\\n        emit OwnershipTransferred(_owner, address(0));\\n        _owner = address(0);\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\\n     * Can only be called by the current owner.\\n     */\\n    function transferOwnership(address newOwner) public virtual onlyOwner {\\n        require(newOwner != address(0), \\\"Ownable: new owner is the zero address\\\");\\n        emit OwnershipTransferred(_owner, newOwner);\\n        _owner = newOwner;\\n    }\\n}\\n\",\"keccak256\":\"0x4bd6402ca6b3419008c2b482aff54e66836e8cb4eba2680e42ac5884ae6424fc\"},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.6.0;\\n\\n/**\\n * @dev Wrappers over Solidity's arithmetic operations with added overflow\\n * checks.\\n *\\n * Arithmetic operations in Solidity wrap on overflow. This can easily result\\n * in bugs, because programmers usually assume that an overflow raises an\\n * error, which is the standard behavior in high level programming languages.\\n * `SafeMath` restores this intuition by reverting the transaction when an\\n * operation overflows.\\n *\\n * Using this library instead of the unchecked operations eliminates an entire\\n * class of bugs, so it's recommended to use it always.\\n */\\nlibrary SafeMath {\\n    /**\\n     * @dev Returns the addition of two unsigned integers, reverting on\\n     * overflow.\\n     *\\n     * Counterpart to Solidity's `+` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - Addition cannot overflow.\\n     */\\n    function add(uint256 a, uint256 b) internal pure returns (uint256) {\\n        uint256 c = a + b;\\n        require(c >= a, \\\"SafeMath: addition overflow\\\");\\n\\n        return c;\\n    }\\n\\n    /**\\n     * @dev Returns the subtraction of two unsigned integers, reverting on\\n     * overflow (when the result is negative).\\n     *\\n     * Counterpart to Solidity's `-` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - Subtraction cannot overflow.\\n     */\\n    function sub(uint256 a, uint256 b) internal pure returns (uint256) {\\n        return sub(a, b, \\\"SafeMath: subtraction overflow\\\");\\n    }\\n\\n    /**\\n     * @dev Returns the subtraction of two unsigned integers, reverting with custom message on\\n     * overflow (when the result is negative).\\n     *\\n     * Counterpart to Solidity's `-` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - Subtraction cannot overflow.\\n     */\\n    function sub(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {\\n        require(b <= a, errorMessage);\\n        uint256 c = a - b;\\n\\n        return c;\\n    }\\n\\n    /**\\n     * @dev Returns the multiplication of two unsigned integers, reverting on\\n     * overflow.\\n     *\\n     * Counterpart to Solidity's `*` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - Multiplication cannot overflow.\\n     */\\n    function mul(uint256 a, uint256 b) internal pure returns (uint256) {\\n        // Gas optimization: this is cheaper than requiring 'a' not being zero, but the\\n        // benefit is lost if 'b' is also tested.\\n        // See: https://github.com/OpenZeppelin/openzeppelin-contracts/pull/522\\n        if (a == 0) {\\n            return 0;\\n        }\\n\\n        uint256 c = a * b;\\n        require(c / a == b, \\\"SafeMath: multiplication overflow\\\");\\n\\n        return c;\\n    }\\n\\n    /**\\n     * @dev Returns the integer division of two unsigned integers. Reverts on\\n     * division by zero. The result is rounded towards zero.\\n     *\\n     * Counterpart to Solidity's `/` operator. Note: this function uses a\\n     * `revert` opcode (which leaves remaining gas untouched) while Solidity\\n     * uses an invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     *\\n     * - The divisor cannot be zero.\\n     */\\n    function div(uint256 a, uint256 b) internal pure returns (uint256) {\\n        return div(a, b, \\\"SafeMath: division by zero\\\");\\n    }\\n\\n    /**\\n     * @dev Returns the integer division of two unsigned integers. Reverts with custom message on\\n     * division by zero. The result is rounded towards zero.\\n     *\\n     * Counterpart to Solidity's `/` operator. Note: this function uses a\\n     * `revert` opcode (which leaves remaining gas untouched) while Solidity\\n     * uses an invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     *\\n     * - The divisor cannot be zero.\\n     */\\n    function div(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {\\n        require(b > 0, errorMessage);\\n        uint256 c = a / b;\\n        // assert(a == b * c + a % b); // There is no case in which this doesn't hold\\n\\n        return c;\\n    }\\n\\n    /**\\n     * @dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),\\n     * Reverts when dividing by zero.\\n     *\\n     * Counterpart to Solidity's `%` operator. This function uses a `revert`\\n     * opcode (which leaves remaining gas untouched) while Solidity uses an\\n     * invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     *\\n     * - The divisor cannot be zero.\\n     */\\n    function mod(uint256 a, uint256 b) internal pure returns (uint256) {\\n        return mod(a, b, \\\"SafeMath: modulo by zero\\\");\\n    }\\n\\n    /**\\n     * @dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),\\n     * Reverts with custom message when dividing by zero.\\n     *\\n     * Counterpart to Solidity's `%` operator. This function uses a `revert`\\n     * opcode (which leaves remaining gas untouched) while Solidity uses an\\n     * invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     *\\n     * - The divisor cannot be zero.\\n     */\\n    function mod(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {\\n        require(b != 0, errorMessage);\\n        return a % b;\\n    }\\n}\\n\",\"keccak256\":\"0x9a9cf02622cd7a64261b10534fc3260449da25c98c9e96d1b4ae8110a20e5806\"},\"@openzeppelin/contracts/utils/SafeCast.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.6.0;\\n\\n\\n/**\\n * @dev Wrappers over Solidity's uintXX/intXX casting operators with added overflow\\n * checks.\\n *\\n * Downcasting from uint256/int256 in Solidity does not revert on overflow. This can\\n * easily result in undesired exploitation or bugs, since developers usually\\n * assume that overflows raise errors. `SafeCast` restores this intuition by\\n * reverting the transaction when such an operation overflows.\\n *\\n * Using this library instead of the unchecked operations eliminates an entire\\n * class of bugs, so it's recommended to use it always.\\n *\\n * Can be combined with {SafeMath} and {SignedSafeMath} to extend it to smaller types, by performing\\n * all math on `uint256` and `int256` and then downcasting.\\n */\\nlibrary SafeCast {\\n\\n    /**\\n     * @dev Returns the downcasted uint128 from uint256, reverting on\\n     * overflow (when the input is greater than largest uint128).\\n     *\\n     * Counterpart to Solidity's `uint128` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - input must fit into 128 bits\\n     */\\n    function toUint128(uint256 value) internal pure returns (uint128) {\\n        require(value < 2**128, \\\"SafeCast: value doesn\\\\'t fit in 128 bits\\\");\\n        return uint128(value);\\n    }\\n\\n    /**\\n     * @dev Returns the downcasted uint64 from uint256, reverting on\\n     * overflow (when the input is greater than largest uint64).\\n     *\\n     * Counterpart to Solidity's `uint64` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - input must fit into 64 bits\\n     */\\n    function toUint64(uint256 value) internal pure returns (uint64) {\\n        require(value < 2**64, \\\"SafeCast: value doesn\\\\'t fit in 64 bits\\\");\\n        return uint64(value);\\n    }\\n\\n    /**\\n     * @dev Returns the downcasted uint32 from uint256, reverting on\\n     * overflow (when the input is greater than largest uint32).\\n     *\\n     * Counterpart to Solidity's `uint32` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - input must fit into 32 bits\\n     */\\n    function toUint32(uint256 value) internal pure returns (uint32) {\\n        require(value < 2**32, \\\"SafeCast: value doesn\\\\'t fit in 32 bits\\\");\\n        return uint32(value);\\n    }\\n\\n    /**\\n     * @dev Returns the downcasted uint16 from uint256, reverting on\\n     * overflow (when the input is greater than largest uint16).\\n     *\\n     * Counterpart to Solidity's `uint16` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - input must fit into 16 bits\\n     */\\n    function toUint16(uint256 value) internal pure returns (uint16) {\\n        require(value < 2**16, \\\"SafeCast: value doesn\\\\'t fit in 16 bits\\\");\\n        return uint16(value);\\n    }\\n\\n    /**\\n     * @dev Returns the downcasted uint8 from uint256, reverting on\\n     * overflow (when the input is greater than largest uint8).\\n     *\\n     * Counterpart to Solidity's `uint8` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - input must fit into 8 bits.\\n     */\\n    function toUint8(uint256 value) internal pure returns (uint8) {\\n        require(value < 2**8, \\\"SafeCast: value doesn\\\\'t fit in 8 bits\\\");\\n        return uint8(value);\\n    }\\n\\n    /**\\n     * @dev Converts a signed int256 into an unsigned uint256.\\n     *\\n     * Requirements:\\n     *\\n     * - input must be greater than or equal to 0.\\n     */\\n    function toUint256(int256 value) internal pure returns (uint256) {\\n        require(value >= 0, \\\"SafeCast: value must be positive\\\");\\n        return uint256(value);\\n    }\\n\\n    /**\\n     * @dev Returns the downcasted int128 from int256, reverting on\\n     * overflow (when the input is less than smallest int128 or\\n     * greater than largest int128).\\n     *\\n     * Counterpart to Solidity's `int128` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - input must fit into 128 bits\\n     *\\n     * _Available since v3.1._\\n     */\\n    function toInt128(int256 value) internal pure returns (int128) {\\n        require(value >= -2**127 && value < 2**127, \\\"SafeCast: value doesn\\\\'t fit in 128 bits\\\");\\n        return int128(value);\\n    }\\n\\n    /**\\n     * @dev Returns the downcasted int64 from int256, reverting on\\n     * overflow (when the input is less than smallest int64 or\\n     * greater than largest int64).\\n     *\\n     * Counterpart to Solidity's `int64` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - input must fit into 64 bits\\n     *\\n     * _Available since v3.1._\\n     */\\n    function toInt64(int256 value) internal pure returns (int64) {\\n        require(value >= -2**63 && value < 2**63, \\\"SafeCast: value doesn\\\\'t fit in 64 bits\\\");\\n        return int64(value);\\n    }\\n\\n    /**\\n     * @dev Returns the downcasted int32 from int256, reverting on\\n     * overflow (when the input is less than smallest int32 or\\n     * greater than largest int32).\\n     *\\n     * Counterpart to Solidity's `int32` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - input must fit into 32 bits\\n     *\\n     * _Available since v3.1._\\n     */\\n    function toInt32(int256 value) internal pure returns (int32) {\\n        require(value >= -2**31 && value < 2**31, \\\"SafeCast: value doesn\\\\'t fit in 32 bits\\\");\\n        return int32(value);\\n    }\\n\\n    /**\\n     * @dev Returns the downcasted int16 from int256, reverting on\\n     * overflow (when the input is less than smallest int16 or\\n     * greater than largest int16).\\n     *\\n     * Counterpart to Solidity's `int16` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - input must fit into 16 bits\\n     *\\n     * _Available since v3.1._\\n     */\\n    function toInt16(int256 value) internal pure returns (int16) {\\n        require(value >= -2**15 && value < 2**15, \\\"SafeCast: value doesn\\\\'t fit in 16 bits\\\");\\n        return int16(value);\\n    }\\n\\n    /**\\n     * @dev Returns the downcasted int8 from int256, reverting on\\n     * overflow (when the input is less than smallest int8 or\\n     * greater than largest int8).\\n     *\\n     * Counterpart to Solidity's `int8` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - input must fit into 8 bits.\\n     *\\n     * _Available since v3.1._\\n     */\\n    function toInt8(int256 value) internal pure returns (int8) {\\n        require(value >= -2**7 && value < 2**7, \\\"SafeCast: value doesn\\\\'t fit in 8 bits\\\");\\n        return int8(value);\\n    }\\n\\n    /**\\n     * @dev Converts an unsigned uint256 into a signed int256.\\n     *\\n     * Requirements:\\n     *\\n     * - input must be less than or equal to maxInt256.\\n     */\\n    function toInt256(uint256 value) internal pure returns (int256) {\\n        require(value < 2**255, \\\"SafeCast: value doesn't fit in an int256\\\");\\n        return int256(value);\\n    }\\n}\\n\",\"keccak256\":\"0xf06035c6398edfcb048e31e6cb7f485c203230a037e21b4aad337abd8ee896a3\"},\"contracts/IBlockHeaderPrecompiledContract.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-3.0\\n\\npragma solidity ^0.6.6;\\n\\ninterface IBlockHeaderPrecompiledContract {\\n    function getBitcoinHeader(int256 indexBlock) external view returns (bytes memory coinbase);\\n}\",\"keccak256\":\"0x4d8ef5558213a6c059fc5c8324a9c5d1ba752bd1a48eb61fc285e78f1fd9630b\"},\"contracts/RNGBlockhash.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-3.0\\n\\npragma solidity ^0.6.6;\\n\\nimport \\\"@openzeppelin/contracts/access/Ownable.sol\\\";\\nimport \\\"@openzeppelin/contracts/math/SafeMath.sol\\\";\\nimport \\\"@openzeppelin/contracts/utils/SafeCast.sol\\\";\\n\\nimport \\\"./RNGInterface.sol\\\";\\nimport \\\"./IBlockHeaderPrecompiledContract.sol\\\";\\n\\ncontract RNGBlockhash is RNGInterface, Ownable {\\n  using SafeMath for uint256;\\n  using SafeCast for uint256;\\n  IBlockHeaderPrecompiledContract public blockHeaderContract = IBlockHeaderPrecompiledContract(0x0000000000000000000000000000000001000010);\\n  uint32 public confirmations = 12;\\n\\n  /// @dev A counter for the number of requests made used for request ids\\n  uint32 internal requestCount;\\n\\n  /// @dev A list of random numbers from past requests mapped by request id\\n  mapping(uint32 => uint256) internal randomNumbers;\\n\\n  /// @dev A list of blocks to be locked at based on past requests mapped by request id\\n  mapping(uint32 => uint32) internal requestLockBlock;\\n\\n  /// @notice Public constructor\\n  constructor() public { }\\n\\n  /// @notice Gets the last request id used by the RNG service\\n  /// @return requestId The last request id used in the last request\\n  function getLastRequestId() external override view returns (uint32 requestId) {\\n    return requestCount;\\n  }\\n\\n  /// @notice Gets the Fee for making a Request against an RNG service\\n  /// @return feeToken The address of the token that is used to pay fees\\n  /// @return requestFee The fee required to be paid to make a request\\n  function getRequestFee() external override view returns (address feeToken, uint256 requestFee) {\\n    return (address(0), 0);\\n  }\\n\\n  /// @notice Sends a request for a random number to the 3rd-party service\\n  /// @dev Some services will complete the request immediately, others may have a time-delay\\n  /// @dev Some services require payment in the form of a token, such as $LINK for Chainlink VRF\\n  /// @return requestId The ID of the request used to get the results of the RNG service\\n  /// @return lockBlock The block number at which the RNG service will start generating time-delayed randomness.  The calling contract\\n  /// should \\\"lock\\\" all activity until the result is available via the `requestId`\\n  function requestRandomNumber() external virtual override returns (uint32 requestId, uint32 lockBlock) {\\n    requestId = _getNextRequestId();\\n    lockBlock = uint32(block.number);\\n\\n    requestLockBlock[requestId] = lockBlock;\\n\\n    emit RandomNumberRequested(requestId, msg.sender);\\n  }\\n\\n  /// @notice Checks if the request for randomness from the 3rd-party service has completed\\n  /// @dev For time-delayed requests, this function is used to check/confirm completion\\n  /// @param requestId The ID of the request used to get the results of the RNG service\\n  /// @return isCompleted True if the request has completed and a random number is available, false otherwise\\n  function isRequestComplete(uint32 requestId) external virtual override view returns (bool isCompleted) {\\n    return _isRequestComplete(requestId);\\n  }\\n\\n  /// @notice Gets the random number produced by the 3rd-party service\\n  /// @param requestId The ID of the request used to get the results of the RNG service\\n  /// @return randomNum The random number\\n  function randomNumber(uint32 requestId) external virtual override returns (uint256 randomNum) {\\n    require(_isRequestComplete(requestId), \\\"RNGBlockhash/request-incomplete\\\");\\n\\n    if (randomNumbers[requestId] == 0) {\\n      _storeResult(requestId, _getSeed());\\n    }\\n\\n    return randomNumbers[requestId];\\n  }\\n\\n  /// @dev Checks if the request for randomness from the 3rd-party service has completed\\n  /// @param requestId The ID of the request used to get the results of the RNG service\\n  /// @return True if the request has completed and a random number is available, false otherwise\\n  function _isRequestComplete(uint32 requestId) internal view returns (bool) {\\n    return block.number > (requestLockBlock[requestId] + confirmations) && requestId <= requestCount && requestId > 0;\\n  }\\n\\n  /// @dev Gets the next consecutive request ID to be used\\n  /// @return requestId The ID to be used for the next request\\n  function _getNextRequestId() internal returns (uint32 requestId) {\\n    requestCount = uint256(requestCount).add(1).toUint32();\\n    requestId = requestCount;\\n  }\\n\\n  /// @dev Gets a seed for a random number from the latest available blockhash\\n  /// @return seed The seed to be used for generating a random number\\n  function _getSeed() internal virtual view returns (uint256 seed) {\\n    bytes memory header = blockHeaderContract.getBitcoinHeader(int256(block.number - confirmations));\\n    bytes32 headerHash = sha256(header);\\n    bytes32 random = sha256(abi.encodePacked(headerHash));\\n    return uint256(random);\\n  }\\n\\n  /// @dev Stores the latest random number by request ID and logs the event\\n  /// @param requestId The ID of the request to store the random number\\n  /// @param result The random number for the request ID\\n  function _storeResult(uint32 requestId, uint256 result) internal {\\n    // Store random value\\n    randomNumbers[requestId] = result;\\n\\n    emit RandomNumberCompleted(requestId, result);\\n  }\\n\\n}\\n\",\"keccak256\":\"0x88052b9c40b24f5843006cf46f721dc06610328350cb486edad49701c9856678\"},\"contracts/RNGInterface.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-3.0\\n\\npragma solidity >=0.6.0;\\n\\n/// @title Random Number Generator Interface\\n/// @notice Provides an interface for requesting random numbers from 3rd-party RNG services (Chainlink VRF, Starkware VDF, etc..)\\ninterface RNGInterface {\\n\\n  /// @notice Emitted when a new request for a random number has been submitted\\n  /// @param requestId The indexed ID of the request used to get the results of the RNG service\\n  /// @param sender The indexed address of the sender of the request\\n  event RandomNumberRequested(uint32 indexed requestId, address indexed sender);\\n\\n  /// @notice Emitted when an existing request for a random number has been completed\\n  /// @param requestId The indexed ID of the request used to get the results of the RNG service\\n  /// @param randomNumber The random number produced by the 3rd-party service\\n  event RandomNumberCompleted(uint32 indexed requestId, uint256 randomNumber);\\n\\n  /// @notice Gets the last request id used by the RNG service\\n  /// @return requestId The last request id used in the last request\\n  function getLastRequestId() external view returns (uint32 requestId);\\n\\n  /// @notice Gets the Fee for making a Request against an RNG service\\n  /// @return feeToken The address of the token that is used to pay fees\\n  /// @return requestFee The fee required to be paid to make a request\\n  function getRequestFee() external view returns (address feeToken, uint256 requestFee);\\n\\n  /// @notice Sends a request for a random number to the 3rd-party service\\n  /// @dev Some services will complete the request immediately, others may have a time-delay\\n  /// @dev Some services require payment in the form of a token, such as $LINK for Chainlink VRF\\n  /// @return requestId The ID of the request used to get the results of the RNG service\\n  /// @return lockBlock The block number at which the RNG service will start generating time-delayed randomness.  The calling contract\\n  /// should \\\"lock\\\" all activity until the result is available via the `requestId`\\n  function requestRandomNumber() external returns (uint32 requestId, uint32 lockBlock);\\n\\n  /// @notice Checks if the request for randomness from the 3rd-party service has completed\\n  /// @dev For time-delayed requests, this function is used to check/confirm completion\\n  /// @param requestId The ID of the request used to get the results of the RNG service\\n  /// @return isCompleted True if the request has completed and a random number is available, false otherwise\\n  function isRequestComplete(uint32 requestId) external view returns (bool isCompleted);\\n\\n  /// @notice Gets the random number produced by the 3rd-party service\\n  /// @param requestId The ID of the request used to get the results of the RNG service\\n  /// @return randomNum The random number\\n  function randomNumber(uint32 requestId) external returns (uint256 randomNum);\\n}\\n\",\"keccak256\":\"0xf917c68439d7476cd226f475e8fce940e0cf1d32cb0ff12e8537072a07f2b1da\"}},\"version\":1}",
+  "bytecode": "0x60806040526001805463010000106001600160a01b03199091161763ffffffff60a01b1916600360a21b17905534801561003857600080fd5b50600061004c6001600160e01b0361009b16565b600080546001600160a01b0319166001600160a01b0383169081178255604051929350917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908290a35061009f565b3390565b6109c4806100ae6000396000f3fe608060405234801561001057600080fd5b506004361061009e5760003560e01c80638da5cb5b116100665780638da5cb5b1461015b5780639cf5d6071461017f5780639d2a5f9814610187578063d394f838146101bc578063f2fde38b146101c45761009e565b80630d37b537146100a357806319c2b4c3146100ce5780633a19b9bc146100ef578063715018a6146101265780638678a7b214610130575b600080fd5b6100ab6101ea565b604080516001600160a01b03909316835260208301919091528051918290030190f35b6100d66101f1565b6040805163ffffffff9092168252519081900360200190f35b6101126004803603602081101561010557600080fd5b503563ffffffff16610204565b604080519115158252519081900360200190f35b61012e610215565b005b6101386102c9565b6040805163ffffffff938416815291909216602082015281519081900390910190f35b61016361032d565b604080516001600160a01b039092168252519081900360200190f35b6100d661033c565b6101aa6004803603602081101561019d57600080fd5b503563ffffffff1661034f565b60408051918252519081900360200190f35b6101636103ef565b61012e600480360360208110156101da57600080fd5b50356001600160a01b03166103fe565b6000809091565b600154600160c01b900463ffffffff1690565b600061020f82610508565b92915050565b61021d610566565b6000546001600160a01b0390811691161461027f576040805162461bcd60e51b815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604482015290519081900360640190fd5b600080546040516001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a3600080546001600160a01b0319169055565b6000806102d461056a565b63ffffffff818116600081815260036020526040808220805463ffffffff19164395861617905551939550919350339290917fcf635b20f2defc1e71326dc4f0b616fa676e29a5bae87da19fcaddc550b33f0391a39091565b6000546001600160a01b031690565b600154600160a01b900463ffffffff1681565b600061035a82610508565b6103ab576040805162461bcd60e51b815260206004820152601f60248201527f524e47426c6f636b686173682f726571756573742d696e636f6d706c65746500604482015290519081900360640190fd5b63ffffffff82166000908152600260205260409020546103d6576103d6826103d16105c1565b610847565b5063ffffffff1660009081526002602052604090205490565b6001546001600160a01b031681565b610406610566565b6000546001600160a01b03908116911614610468576040805162461bcd60e51b815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604482015290519081900360640190fd5b6001600160a01b0381166104ad5760405162461bcd60e51b81526004018080602001828103825260268152602001806109436026913960400191505060405180910390fd5b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a3600080546001600160a01b0319166001600160a01b0392909216919091179055565b60015463ffffffff8281166000908152600360205260408120549092600160a01b90048216908216011643118015610553575060015463ffffffff600160c01b909104811690831611155b801561020f57505063ffffffff16151590565b3390565b600180546000916105949161058f9163ffffffff600160c01b90920482169161089816565b6108f9565b6001805463ffffffff60c01b1916600160c01b63ffffffff93841681029190911791829055900416919050565b60015460408051633073c6eb60e01b815263ffffffff600160a01b8404164303600482015290516000926060926001600160a01b0390911691633073c6eb916024808201928792909190829003018186803b15801561061f57600080fd5b505afa158015610633573d6000803e3d6000fd5b505050506040513d6000823e601f3d908101601f19168201604052602081101561065c57600080fd5b810190808051604051939291908464010000000082111561067c57600080fd5b90830190602082018581111561069157600080fd5b82516401000000008111828201881017156106ab57600080fd5b82525081516020918201929091019080838360005b838110156106d85781810151838201526020016106c0565b50505050905090810190601f1680156107055780820380516001836020036101000a031916815260200191505b50604052505050905060006002826040518082805190602001908083835b602083106107425780518252601f199092019160209182019101610723565b51815160209384036101000a60001901801990921691161790526040519190930194509192505080830381855afa158015610781573d6000803e3d6000fd5b5050506040513d602081101561079657600080fd5b5051604080516020818101849052825180830382018152918301928390528151939450600093600293918291908401908083835b602083106107e95780518252601f1990920191602091820191016107ca565b51815160209384036101000a60001901801990921691161790526040519190930194509192505080830381855afa158015610828573d6000803e3d6000fd5b5050506040513d602081101561083d57600080fd5b5051935050505090565b63ffffffff8216600081815260026020908152604091829020849055815184815291517f629394f18de7accce1179c28c39be59503a57cbcf45980a2772743b041b362719281900390910190a25050565b6000828201838110156108f2576040805162461bcd60e51b815260206004820152601b60248201527f536166654d6174683a206164646974696f6e206f766572666c6f770000000000604482015290519081900360640190fd5b9392505050565b6000640100000000821061093e5760405162461bcd60e51b81526004018080602001828103825260268152602001806109696026913960400191505060405180910390fd5b509056fe4f776e61626c653a206e6577206f776e657220697320746865207a65726f206164647265737353616665436173743a2076616c756520646f65736e27742066697420696e2033322062697473a26469706673582212203b15b3a0e57680a95a5ad614a5a99b4f181ed3d02e136fa0dc0be3aac1823b1164736f6c63430006060033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061009e5760003560e01c80638da5cb5b116100665780638da5cb5b1461015b5780639cf5d6071461017f5780639d2a5f9814610187578063d394f838146101bc578063f2fde38b146101c45761009e565b80630d37b537146100a357806319c2b4c3146100ce5780633a19b9bc146100ef578063715018a6146101265780638678a7b214610130575b600080fd5b6100ab6101ea565b604080516001600160a01b03909316835260208301919091528051918290030190f35b6100d66101f1565b6040805163ffffffff9092168252519081900360200190f35b6101126004803603602081101561010557600080fd5b503563ffffffff16610204565b604080519115158252519081900360200190f35b61012e610215565b005b6101386102c9565b6040805163ffffffff938416815291909216602082015281519081900390910190f35b61016361032d565b604080516001600160a01b039092168252519081900360200190f35b6100d661033c565b6101aa6004803603602081101561019d57600080fd5b503563ffffffff1661034f565b60408051918252519081900360200190f35b6101636103ef565b61012e600480360360208110156101da57600080fd5b50356001600160a01b03166103fe565b6000809091565b600154600160c01b900463ffffffff1690565b600061020f82610508565b92915050565b61021d610566565b6000546001600160a01b0390811691161461027f576040805162461bcd60e51b815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604482015290519081900360640190fd5b600080546040516001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a3600080546001600160a01b0319169055565b6000806102d461056a565b63ffffffff818116600081815260036020526040808220805463ffffffff19164395861617905551939550919350339290917fcf635b20f2defc1e71326dc4f0b616fa676e29a5bae87da19fcaddc550b33f0391a39091565b6000546001600160a01b031690565b600154600160a01b900463ffffffff1681565b600061035a82610508565b6103ab576040805162461bcd60e51b815260206004820152601f60248201527f524e47426c6f636b686173682f726571756573742d696e636f6d706c65746500604482015290519081900360640190fd5b63ffffffff82166000908152600260205260409020546103d6576103d6826103d16105c1565b610847565b5063ffffffff1660009081526002602052604090205490565b6001546001600160a01b031681565b610406610566565b6000546001600160a01b03908116911614610468576040805162461bcd60e51b815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604482015290519081900360640190fd5b6001600160a01b0381166104ad5760405162461bcd60e51b81526004018080602001828103825260268152602001806109436026913960400191505060405180910390fd5b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a3600080546001600160a01b0319166001600160a01b0392909216919091179055565b60015463ffffffff8281166000908152600360205260408120549092600160a01b90048216908216011643118015610553575060015463ffffffff600160c01b909104811690831611155b801561020f57505063ffffffff16151590565b3390565b600180546000916105949161058f9163ffffffff600160c01b90920482169161089816565b6108f9565b6001805463ffffffff60c01b1916600160c01b63ffffffff93841681029190911791829055900416919050565b60015460408051633073c6eb60e01b815263ffffffff600160a01b8404164303600482015290516000926060926001600160a01b0390911691633073c6eb916024808201928792909190829003018186803b15801561061f57600080fd5b505afa158015610633573d6000803e3d6000fd5b505050506040513d6000823e601f3d908101601f19168201604052602081101561065c57600080fd5b810190808051604051939291908464010000000082111561067c57600080fd5b90830190602082018581111561069157600080fd5b82516401000000008111828201881017156106ab57600080fd5b82525081516020918201929091019080838360005b838110156106d85781810151838201526020016106c0565b50505050905090810190601f1680156107055780820380516001836020036101000a031916815260200191505b50604052505050905060006002826040518082805190602001908083835b602083106107425780518252601f199092019160209182019101610723565b51815160209384036101000a60001901801990921691161790526040519190930194509192505080830381855afa158015610781573d6000803e3d6000fd5b5050506040513d602081101561079657600080fd5b5051604080516020818101849052825180830382018152918301928390528151939450600093600293918291908401908083835b602083106107e95780518252601f1990920191602091820191016107ca565b51815160209384036101000a60001901801990921691161790526040519190930194509192505080830381855afa158015610828573d6000803e3d6000fd5b5050506040513d602081101561083d57600080fd5b5051935050505090565b63ffffffff8216600081815260026020908152604091829020849055815184815291517f629394f18de7accce1179c28c39be59503a57cbcf45980a2772743b041b362719281900390910190a25050565b6000828201838110156108f2576040805162461bcd60e51b815260206004820152601b60248201527f536166654d6174683a206164646974696f6e206f766572666c6f770000000000604482015290519081900360640190fd5b9392505050565b6000640100000000821061093e5760405162461bcd60e51b81526004018080602001828103825260268152602001806109696026913960400191505060405180910390fd5b509056fe4f776e61626c653a206e6577206f776e657220697320746865207a65726f206164647265737353616665436173743a2076616c756520646f65736e27742066697420696e2033322062697473a26469706673582212203b15b3a0e57680a95a5ad614a5a99b4f181ed3d02e136fa0dc0be3aac1823b1164736f6c63430006060033",
+  "devdoc": {
+    "methods": {
+      "isRequestComplete(uint32)": {
+        "details": "For time-delayed requests, this function is used to check/confirm completion",
+        "params": {
+          "requestId": "The ID of the request used to get the results of the RNG service"
+        },
+        "returns": {
+          "isCompleted": "True if the request has completed and a random number is available, false otherwise"
         }
-      ],
-      "blockNumber": 1404393,
-      "cumulativeGasUsed": "729407",
-      "status": 1,
-      "byzantium": true
-    },
-    "address": "0x2aD445b0EFcb337Db6682F6B904f0263BaE85509",
-    "args": [],
-    "solcInputHash": "0x26e0bd208ad05d8956d520d7e5379216aedccc0f0c71bedcd288f66294911ba5",
-    "metadata": "{\"compiler\":{\"version\":\"0.6.6+commit.6c089d02\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint32\",\"name\":\"requestId\",\"type\":\"uint32\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"randomNumber\",\"type\":\"uint256\"}],\"name\":\"RandomNumberCompleted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint32\",\"name\":\"requestId\",\"type\":\"uint32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RandomNumberRequested\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"blockHeaderContract\",\"outputs\":[{\"internalType\":\"contract IBlockHeaderPrecompiledContract\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"confirmations\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getLastRequestId\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"requestId\",\"type\":\"uint32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getRequestFee\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"feeToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"requestFee\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"requestId\",\"type\":\"uint32\"}],\"name\":\"isRequestComplete\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"isCompleted\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"requestId\",\"type\":\"uint32\"}],\"name\":\"randomNumber\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"randomNum\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"requestRandomNumber\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"requestId\",\"type\":\"uint32\"},{\"internalType\":\"uint32\",\"name\":\"lockBlock\",\"type\":\"uint32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"isRequestComplete(uint32)\":{\"details\":\"For time-delayed requests, this function is used to check/confirm completion\",\"params\":{\"requestId\":\"The ID of the request used to get the results of the RNG service\"},\"returns\":{\"isCompleted\":\"True if the request has completed and a random number is available, false otherwise\"}},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"randomNumber(uint32)\":{\"params\":{\"requestId\":\"The ID of the request used to get the results of the RNG service\"},\"returns\":{\"randomNum\":\"The random number\"}},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"requestRandomNumber()\":{\"details\":\"Some services will complete the request immediately, others may have a time-delaySome services require payment in the form of a token, such as $LINK for Chainlink VRF\",\"returns\":{\"lockBlock\":\"The block number at which the RNG service will start generating time-delayed randomness.  The calling contract should \\\"lock\\\" all activity until the result is available via the `requestId`\",\"requestId\":\"The ID of the request used to get the results of the RNG service\"}},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}}},\"userdoc\":{\"methods\":{\"constructor\":\"Public constructor\",\"getLastRequestId()\":{\"notice\":\"Gets the last request id used by the RNG service\"},\"getRequestFee()\":{\"notice\":\"Gets the Fee for making a Request against an RNG service\"},\"isRequestComplete(uint32)\":{\"notice\":\"Checks if the request for randomness from the 3rd-party service has completed\"},\"randomNumber(uint32)\":{\"notice\":\"Gets the random number produced by the 3rd-party service\"},\"requestRandomNumber()\":{\"notice\":\"Sends a request for a random number to the 3rd-party service\"}}}},\"settings\":{\"compilationTarget\":{\"contracts/RNGBlockhash.sol\":\"RNGBlockhash\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/GSN/Context.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.6.0;\\n\\n/*\\n * @dev Provides information about the current execution context, including the\\n * sender of the transaction and its data. While these are generally available\\n * via msg.sender and msg.data, they should not be accessed in such a direct\\n * manner, since when dealing with GSN meta-transactions the account sending and\\n * paying for execution may not be the actual sender (as far as an application\\n * is concerned).\\n *\\n * This contract is only required for intermediate, library-like contracts.\\n */\\nabstract contract Context {\\n    function _msgSender() internal view virtual returns (address payable) {\\n        return msg.sender;\\n    }\\n\\n    function _msgData() internal view virtual returns (bytes memory) {\\n        this; // silence state mutability warning without generating bytecode - see https://github.com/ethereum/solidity/issues/2691\\n        return msg.data;\\n    }\\n}\\n\",\"keccak256\":\"0xdb26cbf4d028490f49831a7865c2fe1b28db44b535ca8d343785a3b768aae183\"},\"@openzeppelin/contracts/access/Ownable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.6.0;\\n\\nimport \\\"../GSN/Context.sol\\\";\\n/**\\n * @dev Contract module which provides a basic access control mechanism, where\\n * there is an account (an owner) that can be granted exclusive access to\\n * specific functions.\\n *\\n * By default, the owner account will be the one that deploys the contract. This\\n * can later be changed with {transferOwnership}.\\n *\\n * This module is used through inheritance. It will make available the modifier\\n * `onlyOwner`, which can be applied to your functions to restrict their use to\\n * the owner.\\n */\\ncontract Ownable is Context {\\n    address private _owner;\\n\\n    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);\\n\\n    /**\\n     * @dev Initializes the contract setting the deployer as the initial owner.\\n     */\\n    constructor () internal {\\n        address msgSender = _msgSender();\\n        _owner = msgSender;\\n        emit OwnershipTransferred(address(0), msgSender);\\n    }\\n\\n    /**\\n     * @dev Returns the address of the current owner.\\n     */\\n    function owner() public view returns (address) {\\n        return _owner;\\n    }\\n\\n    /**\\n     * @dev Throws if called by any account other than the owner.\\n     */\\n    modifier onlyOwner() {\\n        require(_owner == _msgSender(), \\\"Ownable: caller is not the owner\\\");\\n        _;\\n    }\\n\\n    /**\\n     * @dev Leaves the contract without owner. It will not be possible to call\\n     * `onlyOwner` functions anymore. Can only be called by the current owner.\\n     *\\n     * NOTE: Renouncing ownership will leave the contract without an owner,\\n     * thereby removing any functionality that is only available to the owner.\\n     */\\n    function renounceOwnership() public virtual onlyOwner {\\n        emit OwnershipTransferred(_owner, address(0));\\n        _owner = address(0);\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\\n     * Can only be called by the current owner.\\n     */\\n    function transferOwnership(address newOwner) public virtual onlyOwner {\\n        require(newOwner != address(0), \\\"Ownable: new owner is the zero address\\\");\\n        emit OwnershipTransferred(_owner, newOwner);\\n        _owner = newOwner;\\n    }\\n}\\n\",\"keccak256\":\"0x4bd6402ca6b3419008c2b482aff54e66836e8cb4eba2680e42ac5884ae6424fc\"},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.6.0;\\n\\n/**\\n * @dev Wrappers over Solidity's arithmetic operations with added overflow\\n * checks.\\n *\\n * Arithmetic operations in Solidity wrap on overflow. This can easily result\\n * in bugs, because programmers usually assume that an overflow raises an\\n * error, which is the standard behavior in high level programming languages.\\n * `SafeMath` restores this intuition by reverting the transaction when an\\n * operation overflows.\\n *\\n * Using this library instead of the unchecked operations eliminates an entire\\n * class of bugs, so it's recommended to use it always.\\n */\\nlibrary SafeMath {\\n    /**\\n     * @dev Returns the addition of two unsigned integers, reverting on\\n     * overflow.\\n     *\\n     * Counterpart to Solidity's `+` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - Addition cannot overflow.\\n     */\\n    function add(uint256 a, uint256 b) internal pure returns (uint256) {\\n        uint256 c = a + b;\\n        require(c >= a, \\\"SafeMath: addition overflow\\\");\\n\\n        return c;\\n    }\\n\\n    /**\\n     * @dev Returns the subtraction of two unsigned integers, reverting on\\n     * overflow (when the result is negative).\\n     *\\n     * Counterpart to Solidity's `-` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - Subtraction cannot overflow.\\n     */\\n    function sub(uint256 a, uint256 b) internal pure returns (uint256) {\\n        return sub(a, b, \\\"SafeMath: subtraction overflow\\\");\\n    }\\n\\n    /**\\n     * @dev Returns the subtraction of two unsigned integers, reverting with custom message on\\n     * overflow (when the result is negative).\\n     *\\n     * Counterpart to Solidity's `-` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - Subtraction cannot overflow.\\n     */\\n    function sub(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {\\n        require(b <= a, errorMessage);\\n        uint256 c = a - b;\\n\\n        return c;\\n    }\\n\\n    /**\\n     * @dev Returns the multiplication of two unsigned integers, reverting on\\n     * overflow.\\n     *\\n     * Counterpart to Solidity's `*` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - Multiplication cannot overflow.\\n     */\\n    function mul(uint256 a, uint256 b) internal pure returns (uint256) {\\n        // Gas optimization: this is cheaper than requiring 'a' not being zero, but the\\n        // benefit is lost if 'b' is also tested.\\n        // See: https://github.com/OpenZeppelin/openzeppelin-contracts/pull/522\\n        if (a == 0) {\\n            return 0;\\n        }\\n\\n        uint256 c = a * b;\\n        require(c / a == b, \\\"SafeMath: multiplication overflow\\\");\\n\\n        return c;\\n    }\\n\\n    /**\\n     * @dev Returns the integer division of two unsigned integers. Reverts on\\n     * division by zero. The result is rounded towards zero.\\n     *\\n     * Counterpart to Solidity's `/` operator. Note: this function uses a\\n     * `revert` opcode (which leaves remaining gas untouched) while Solidity\\n     * uses an invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     *\\n     * - The divisor cannot be zero.\\n     */\\n    function div(uint256 a, uint256 b) internal pure returns (uint256) {\\n        return div(a, b, \\\"SafeMath: division by zero\\\");\\n    }\\n\\n    /**\\n     * @dev Returns the integer division of two unsigned integers. Reverts with custom message on\\n     * division by zero. The result is rounded towards zero.\\n     *\\n     * Counterpart to Solidity's `/` operator. Note: this function uses a\\n     * `revert` opcode (which leaves remaining gas untouched) while Solidity\\n     * uses an invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     *\\n     * - The divisor cannot be zero.\\n     */\\n    function div(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {\\n        require(b > 0, errorMessage);\\n        uint256 c = a / b;\\n        // assert(a == b * c + a % b); // There is no case in which this doesn't hold\\n\\n        return c;\\n    }\\n\\n    /**\\n     * @dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),\\n     * Reverts when dividing by zero.\\n     *\\n     * Counterpart to Solidity's `%` operator. This function uses a `revert`\\n     * opcode (which leaves remaining gas untouched) while Solidity uses an\\n     * invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     *\\n     * - The divisor cannot be zero.\\n     */\\n    function mod(uint256 a, uint256 b) internal pure returns (uint256) {\\n        return mod(a, b, \\\"SafeMath: modulo by zero\\\");\\n    }\\n\\n    /**\\n     * @dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),\\n     * Reverts with custom message when dividing by zero.\\n     *\\n     * Counterpart to Solidity's `%` operator. This function uses a `revert`\\n     * opcode (which leaves remaining gas untouched) while Solidity uses an\\n     * invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     *\\n     * - The divisor cannot be zero.\\n     */\\n    function mod(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {\\n        require(b != 0, errorMessage);\\n        return a % b;\\n    }\\n}\\n\",\"keccak256\":\"0x9a9cf02622cd7a64261b10534fc3260449da25c98c9e96d1b4ae8110a20e5806\"},\"@openzeppelin/contracts/utils/SafeCast.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.6.0;\\n\\n\\n/**\\n * @dev Wrappers over Solidity's uintXX/intXX casting operators with added overflow\\n * checks.\\n *\\n * Downcasting from uint256/int256 in Solidity does not revert on overflow. This can\\n * easily result in undesired exploitation or bugs, since developers usually\\n * assume that overflows raise errors. `SafeCast` restores this intuition by\\n * reverting the transaction when such an operation overflows.\\n *\\n * Using this library instead of the unchecked operations eliminates an entire\\n * class of bugs, so it's recommended to use it always.\\n *\\n * Can be combined with {SafeMath} and {SignedSafeMath} to extend it to smaller types, by performing\\n * all math on `uint256` and `int256` and then downcasting.\\n */\\nlibrary SafeCast {\\n\\n    /**\\n     * @dev Returns the downcasted uint128 from uint256, reverting on\\n     * overflow (when the input is greater than largest uint128).\\n     *\\n     * Counterpart to Solidity's `uint128` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - input must fit into 128 bits\\n     */\\n    function toUint128(uint256 value) internal pure returns (uint128) {\\n        require(value < 2**128, \\\"SafeCast: value doesn\\\\'t fit in 128 bits\\\");\\n        return uint128(value);\\n    }\\n\\n    /**\\n     * @dev Returns the downcasted uint64 from uint256, reverting on\\n     * overflow (when the input is greater than largest uint64).\\n     *\\n     * Counterpart to Solidity's `uint64` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - input must fit into 64 bits\\n     */\\n    function toUint64(uint256 value) internal pure returns (uint64) {\\n        require(value < 2**64, \\\"SafeCast: value doesn\\\\'t fit in 64 bits\\\");\\n        return uint64(value);\\n    }\\n\\n    /**\\n     * @dev Returns the downcasted uint32 from uint256, reverting on\\n     * overflow (when the input is greater than largest uint32).\\n     *\\n     * Counterpart to Solidity's `uint32` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - input must fit into 32 bits\\n     */\\n    function toUint32(uint256 value) internal pure returns (uint32) {\\n        require(value < 2**32, \\\"SafeCast: value doesn\\\\'t fit in 32 bits\\\");\\n        return uint32(value);\\n    }\\n\\n    /**\\n     * @dev Returns the downcasted uint16 from uint256, reverting on\\n     * overflow (when the input is greater than largest uint16).\\n     *\\n     * Counterpart to Solidity's `uint16` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - input must fit into 16 bits\\n     */\\n    function toUint16(uint256 value) internal pure returns (uint16) {\\n        require(value < 2**16, \\\"SafeCast: value doesn\\\\'t fit in 16 bits\\\");\\n        return uint16(value);\\n    }\\n\\n    /**\\n     * @dev Returns the downcasted uint8 from uint256, reverting on\\n     * overflow (when the input is greater than largest uint8).\\n     *\\n     * Counterpart to Solidity's `uint8` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - input must fit into 8 bits.\\n     */\\n    function toUint8(uint256 value) internal pure returns (uint8) {\\n        require(value < 2**8, \\\"SafeCast: value doesn\\\\'t fit in 8 bits\\\");\\n        return uint8(value);\\n    }\\n\\n    /**\\n     * @dev Converts a signed int256 into an unsigned uint256.\\n     *\\n     * Requirements:\\n     *\\n     * - input must be greater than or equal to 0.\\n     */\\n    function toUint256(int256 value) internal pure returns (uint256) {\\n        require(value >= 0, \\\"SafeCast: value must be positive\\\");\\n        return uint256(value);\\n    }\\n\\n    /**\\n     * @dev Returns the downcasted int128 from int256, reverting on\\n     * overflow (when the input is less than smallest int128 or\\n     * greater than largest int128).\\n     *\\n     * Counterpart to Solidity's `int128` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - input must fit into 128 bits\\n     *\\n     * _Available since v3.1._\\n     */\\n    function toInt128(int256 value) internal pure returns (int128) {\\n        require(value >= -2**127 && value < 2**127, \\\"SafeCast: value doesn\\\\'t fit in 128 bits\\\");\\n        return int128(value);\\n    }\\n\\n    /**\\n     * @dev Returns the downcasted int64 from int256, reverting on\\n     * overflow (when the input is less than smallest int64 or\\n     * greater than largest int64).\\n     *\\n     * Counterpart to Solidity's `int64` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - input must fit into 64 bits\\n     *\\n     * _Available since v3.1._\\n     */\\n    function toInt64(int256 value) internal pure returns (int64) {\\n        require(value >= -2**63 && value < 2**63, \\\"SafeCast: value doesn\\\\'t fit in 64 bits\\\");\\n        return int64(value);\\n    }\\n\\n    /**\\n     * @dev Returns the downcasted int32 from int256, reverting on\\n     * overflow (when the input is less than smallest int32 or\\n     * greater than largest int32).\\n     *\\n     * Counterpart to Solidity's `int32` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - input must fit into 32 bits\\n     *\\n     * _Available since v3.1._\\n     */\\n    function toInt32(int256 value) internal pure returns (int32) {\\n        require(value >= -2**31 && value < 2**31, \\\"SafeCast: value doesn\\\\'t fit in 32 bits\\\");\\n        return int32(value);\\n    }\\n\\n    /**\\n     * @dev Returns the downcasted int16 from int256, reverting on\\n     * overflow (when the input is less than smallest int16 or\\n     * greater than largest int16).\\n     *\\n     * Counterpart to Solidity's `int16` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - input must fit into 16 bits\\n     *\\n     * _Available since v3.1._\\n     */\\n    function toInt16(int256 value) internal pure returns (int16) {\\n        require(value >= -2**15 && value < 2**15, \\\"SafeCast: value doesn\\\\'t fit in 16 bits\\\");\\n        return int16(value);\\n    }\\n\\n    /**\\n     * @dev Returns the downcasted int8 from int256, reverting on\\n     * overflow (when the input is less than smallest int8 or\\n     * greater than largest int8).\\n     *\\n     * Counterpart to Solidity's `int8` operator.\\n     *\\n     * Requirements:\\n     *\\n     * - input must fit into 8 bits.\\n     *\\n     * _Available since v3.1._\\n     */\\n    function toInt8(int256 value) internal pure returns (int8) {\\n        require(value >= -2**7 && value < 2**7, \\\"SafeCast: value doesn\\\\'t fit in 8 bits\\\");\\n        return int8(value);\\n    }\\n\\n    /**\\n     * @dev Converts an unsigned uint256 into a signed int256.\\n     *\\n     * Requirements:\\n     *\\n     * - input must be less than or equal to maxInt256.\\n     */\\n    function toInt256(uint256 value) internal pure returns (int256) {\\n        require(value < 2**255, \\\"SafeCast: value doesn't fit in an int256\\\");\\n        return int256(value);\\n    }\\n}\\n\",\"keccak256\":\"0xf06035c6398edfcb048e31e6cb7f485c203230a037e21b4aad337abd8ee896a3\"},\"contracts/IBlockHeaderPrecompiledContract.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-3.0\\n\\npragma solidity ^0.6.6;\\n\\ninterface IBlockHeaderPrecompiledContract {\\n    function getBitcoinHeader(int256 indexBlock) external view returns (bytes memory coinbase);\\n}\",\"keccak256\":\"0x4d8ef5558213a6c059fc5c8324a9c5d1ba752bd1a48eb61fc285e78f1fd9630b\"},\"contracts/RNGBlockhash.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-3.0\\n\\npragma solidity ^0.6.6;\\n\\nimport \\\"@openzeppelin/contracts/access/Ownable.sol\\\";\\nimport \\\"@openzeppelin/contracts/math/SafeMath.sol\\\";\\nimport \\\"@openzeppelin/contracts/utils/SafeCast.sol\\\";\\n\\nimport \\\"./RNGInterface.sol\\\";\\nimport \\\"./IBlockHeaderPrecompiledContract.sol\\\";\\n\\ncontract RNGBlockhash is RNGInterface, Ownable {\\n  using SafeMath for uint256;\\n  using SafeCast for uint256;\\n  IBlockHeaderPrecompiledContract public blockHeaderContract = IBlockHeaderPrecompiledContract(0x0000000000000000000000000000000001000010);\\n  uint32 public confirmations = 12;\\n\\n  /// @dev A counter for the number of requests made used for request ids\\n  uint32 internal requestCount;\\n\\n  /// @dev A list of random numbers from past requests mapped by request id\\n  mapping(uint32 => uint256) internal randomNumbers;\\n\\n  /// @dev A list of blocks to be locked at based on past requests mapped by request id\\n  mapping(uint32 => uint32) internal requestLockBlock;\\n\\n  /// @notice Public constructor\\n  constructor() public { }\\n\\n  /// @notice Gets the last request id used by the RNG service\\n  /// @return requestId The last request id used in the last request\\n  function getLastRequestId() external override view returns (uint32 requestId) {\\n    return requestCount;\\n  }\\n\\n  /// @notice Gets the Fee for making a Request against an RNG service\\n  /// @return feeToken The address of the token that is used to pay fees\\n  /// @return requestFee The fee required to be paid to make a request\\n  function getRequestFee() external override view returns (address feeToken, uint256 requestFee) {\\n    return (address(0), 0);\\n  }\\n\\n  /// @notice Sends a request for a random number to the 3rd-party service\\n  /// @dev Some services will complete the request immediately, others may have a time-delay\\n  /// @dev Some services require payment in the form of a token, such as $LINK for Chainlink VRF\\n  /// @return requestId The ID of the request used to get the results of the RNG service\\n  /// @return lockBlock The block number at which the RNG service will start generating time-delayed randomness.  The calling contract\\n  /// should \\\"lock\\\" all activity until the result is available via the `requestId`\\n  function requestRandomNumber() external virtual override returns (uint32 requestId, uint32 lockBlock) {\\n    requestId = _getNextRequestId();\\n    lockBlock = uint32(block.number);\\n\\n    requestLockBlock[requestId] = lockBlock;\\n\\n    emit RandomNumberRequested(requestId, msg.sender);\\n  }\\n\\n  /// @notice Checks if the request for randomness from the 3rd-party service has completed\\n  /// @dev For time-delayed requests, this function is used to check/confirm completion\\n  /// @param requestId The ID of the request used to get the results of the RNG service\\n  /// @return isCompleted True if the request has completed and a random number is available, false otherwise\\n  function isRequestComplete(uint32 requestId) external virtual override view returns (bool isCompleted) {\\n    return _isRequestComplete(requestId);\\n  }\\n\\n  /// @notice Gets the random number produced by the 3rd-party service\\n  /// @param requestId The ID of the request used to get the results of the RNG service\\n  /// @return randomNum The random number\\n  function randomNumber(uint32 requestId) external virtual override returns (uint256 randomNum) {\\n    require(_isRequestComplete(requestId), \\\"RNGBlockhash/request-incomplete\\\");\\n\\n    if (randomNumbers[requestId] == 0) {\\n      _storeResult(requestId, _getSeed());\\n    }\\n\\n    return randomNumbers[requestId];\\n  }\\n\\n  /// @dev Checks if the request for randomness from the 3rd-party service has completed\\n  /// @param requestId The ID of the request used to get the results of the RNG service\\n  /// @return True if the request has completed and a random number is available, false otherwise\\n  function _isRequestComplete(uint32 requestId) internal view returns (bool) {\\n    return block.number > (requestLockBlock[requestId] + confirmations);\\n  }\\n\\n  /// @dev Gets the next consecutive request ID to be used\\n  /// @return requestId The ID to be used for the next request\\n  function _getNextRequestId() internal returns (uint32 requestId) {\\n    requestCount = uint256(requestCount).add(1).toUint32();\\n    requestId = requestCount;\\n  }\\n\\n  /// @dev Gets a seed for a random number from the latest available blockhash\\n  /// @return seed The seed to be used for generating a random number\\n  function _getSeed() internal virtual view returns (uint256 seed) {\\n    bytes memory header = blockHeaderContract.getBitcoinHeader(int256(block.number - confirmations));\\n    bytes32 headerHash = sha256(header);\\n    bytes32 random = keccak256(abi.encodePacked(headerHash, blockhash(block.number - confirmations)));\\n    return uint256(random);\\n  }\\n\\n  /// @dev Stores the latest random number by request ID and logs the event\\n  /// @param requestId The ID of the request to store the random number\\n  /// @param result The random number for the request ID\\n  function _storeResult(uint32 requestId, uint256 result) internal {\\n    // Store random value\\n    randomNumbers[requestId] = result;\\n\\n    emit RandomNumberCompleted(requestId, result);\\n  }\\n\\n}\\n\",\"keccak256\":\"0x21a26cfd5133316f56c56d07730af50f4ac48d86f156f6bd677b60c1ac6cd601\"},\"contracts/RNGInterface.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-3.0\\n\\npragma solidity >=0.6.0;\\n\\n/// @title Random Number Generator Interface\\n/// @notice Provides an interface for requesting random numbers from 3rd-party RNG services (Chainlink VRF, Starkware VDF, etc..)\\ninterface RNGInterface {\\n\\n  /// @notice Emitted when a new request for a random number has been submitted\\n  /// @param requestId The indexed ID of the request used to get the results of the RNG service\\n  /// @param sender The indexed address of the sender of the request\\n  event RandomNumberRequested(uint32 indexed requestId, address indexed sender);\\n\\n  /// @notice Emitted when an existing request for a random number has been completed\\n  /// @param requestId The indexed ID of the request used to get the results of the RNG service\\n  /// @param randomNumber The random number produced by the 3rd-party service\\n  event RandomNumberCompleted(uint32 indexed requestId, uint256 randomNumber);\\n\\n  /// @notice Gets the last request id used by the RNG service\\n  /// @return requestId The last request id used in the last request\\n  function getLastRequestId() external view returns (uint32 requestId);\\n\\n  /// @notice Gets the Fee for making a Request against an RNG service\\n  /// @return feeToken The address of the token that is used to pay fees\\n  /// @return requestFee The fee required to be paid to make a request\\n  function getRequestFee() external view returns (address feeToken, uint256 requestFee);\\n\\n  /// @notice Sends a request for a random number to the 3rd-party service\\n  /// @dev Some services will complete the request immediately, others may have a time-delay\\n  /// @dev Some services require payment in the form of a token, such as $LINK for Chainlink VRF\\n  /// @return requestId The ID of the request used to get the results of the RNG service\\n  /// @return lockBlock The block number at which the RNG service will start generating time-delayed randomness.  The calling contract\\n  /// should \\\"lock\\\" all activity until the result is available via the `requestId`\\n  function requestRandomNumber() external returns (uint32 requestId, uint32 lockBlock);\\n\\n  /// @notice Checks if the request for randomness from the 3rd-party service has completed\\n  /// @dev For time-delayed requests, this function is used to check/confirm completion\\n  /// @param requestId The ID of the request used to get the results of the RNG service\\n  /// @return isCompleted True if the request has completed and a random number is available, false otherwise\\n  function isRequestComplete(uint32 requestId) external view returns (bool isCompleted);\\n\\n  /// @notice Gets the random number produced by the 3rd-party service\\n  /// @param requestId The ID of the request used to get the results of the RNG service\\n  /// @return randomNum The random number\\n  function randomNumber(uint32 requestId) external returns (uint256 randomNum);\\n}\\n\",\"keccak256\":\"0xf917c68439d7476cd226f475e8fce940e0cf1d32cb0ff12e8537072a07f2b1da\"}},\"version\":1}",
-    "bytecode": "0x60806040526001805463010000106001600160a01b03199091161763ffffffff60a01b1916600360a21b17905534801561003857600080fd5b50600061004c6001600160e01b0361009b16565b600080546001600160a01b0319166001600160a01b0383169081178255604051929350917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908290a35061009f565b3390565b610925806100ae6000396000f3fe608060405234801561001057600080fd5b506004361061009e5760003560e01c80638da5cb5b116100665780638da5cb5b1461015b5780639cf5d6071461017f5780639d2a5f9814610187578063d394f838146101bc578063f2fde38b146101c45761009e565b80630d37b537146100a357806319c2b4c3146100ce5780633a19b9bc146100ef578063715018a6146101265780638678a7b214610130575b600080fd5b6100ab6101ea565b604080516001600160a01b03909316835260208301919091528051918290030190f35b6100d66101f1565b6040805163ffffffff9092168252519081900360200190f35b6101126004803603602081101561010557600080fd5b503563ffffffff16610204565b604080519115158252519081900360200190f35b61012e610215565b005b6101386102c9565b6040805163ffffffff938416815291909216602082015281519081900390910190f35b61016361032d565b604080516001600160a01b039092168252519081900360200190f35b6100d661033c565b6101aa6004803603602081101561019d57600080fd5b503563ffffffff1661034f565b60408051918252519081900360200190f35b6101636103ef565b61012e600480360360208110156101da57600080fd5b50356001600160a01b03166103fe565b6000809091565b600154600160c01b900463ffffffff1690565b600061020f82610508565b92915050565b61021d610535565b6000546001600160a01b0390811691161461027f576040805162461bcd60e51b815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604482015290519081900360640190fd5b600080546040516001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a3600080546001600160a01b0319169055565b6000806102d4610539565b63ffffffff818116600081815260036020526040808220805463ffffffff19164395861617905551939550919350339290917fcf635b20f2defc1e71326dc4f0b616fa676e29a5bae87da19fcaddc550b33f0391a39091565b6000546001600160a01b031690565b600154600160a01b900463ffffffff1681565b600061035a82610508565b6103ab576040805162461bcd60e51b815260206004820152601f60248201527f524e47426c6f636b686173682f726571756573742d696e636f6d706c65746500604482015290519081900360640190fd5b63ffffffff82166000908152600260205260409020546103d6576103d6826103d1610590565b6107a8565b5063ffffffff1660009081526002602052604090205490565b6001546001600160a01b031681565b610406610535565b6000546001600160a01b03908116911614610468576040805162461bcd60e51b815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604482015290519081900360640190fd5b6001600160a01b0381166104ad5760405162461bcd60e51b81526004018080602001828103825260268152602001806108a46026913960400191505060405180910390fd5b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a3600080546001600160a01b0319166001600160a01b0392909216919091179055565b60015463ffffffff9182166000908152600360205260409020548216600160a01b90910482160116431190565b3390565b600180546000916105639161055e9163ffffffff600160c01b9092048216916107f916565b61085a565b6001805463ffffffff60c01b1916600160c01b63ffffffff93841681029190911791829055900416919050565b60015460408051633073c6eb60e01b815263ffffffff600160a01b8404164303600482015290516000926060926001600160a01b0390911691633073c6eb916024808201928792909190829003018186803b1580156105ee57600080fd5b505afa158015610602573d6000803e3d6000fd5b505050506040513d6000823e601f3d908101601f19168201604052602081101561062b57600080fd5b810190808051604051939291908464010000000082111561064b57600080fd5b90830190602082018581111561066057600080fd5b825164010000000081118282018810171561067a57600080fd5b82525081516020918201929091019080838360005b838110156106a757818101518382015260200161068f565b50505050905090810190601f1680156106d45780820380516001836020036101000a031916815260200191505b50604052505050905060006002826040518082805190602001908083835b602083106107115780518252601f1990920191602091820191016106f2565b51815160209384036101000a60001901801990921691161790526040519190930194509192505080830381855afa158015610750573d6000803e3d6000fd5b5050506040513d602081101561076557600080fd5b505160015460408051602080820194909452600160a01b90920463ffffffff16430340828201528051808303820181526060909201905280519101209392505050565b63ffffffff8216600081815260026020908152604091829020849055815184815291517f629394f18de7accce1179c28c39be59503a57cbcf45980a2772743b041b362719281900390910190a25050565b600082820183811015610853576040805162461bcd60e51b815260206004820152601b60248201527f536166654d6174683a206164646974696f6e206f766572666c6f770000000000604482015290519081900360640190fd5b9392505050565b6000640100000000821061089f5760405162461bcd60e51b81526004018080602001828103825260268152602001806108ca6026913960400191505060405180910390fd5b509056fe4f776e61626c653a206e6577206f776e657220697320746865207a65726f206164647265737353616665436173743a2076616c756520646f65736e27742066697420696e2033322062697473a2646970667358221220c320ddb09c4f085cb52958d50d1475b1cefa2025259a2bf5f19f0a043fab442264736f6c63430006060033",
-    "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061009e5760003560e01c80638da5cb5b116100665780638da5cb5b1461015b5780639cf5d6071461017f5780639d2a5f9814610187578063d394f838146101bc578063f2fde38b146101c45761009e565b80630d37b537146100a357806319c2b4c3146100ce5780633a19b9bc146100ef578063715018a6146101265780638678a7b214610130575b600080fd5b6100ab6101ea565b604080516001600160a01b03909316835260208301919091528051918290030190f35b6100d66101f1565b6040805163ffffffff9092168252519081900360200190f35b6101126004803603602081101561010557600080fd5b503563ffffffff16610204565b604080519115158252519081900360200190f35b61012e610215565b005b6101386102c9565b6040805163ffffffff938416815291909216602082015281519081900390910190f35b61016361032d565b604080516001600160a01b039092168252519081900360200190f35b6100d661033c565b6101aa6004803603602081101561019d57600080fd5b503563ffffffff1661034f565b60408051918252519081900360200190f35b6101636103ef565b61012e600480360360208110156101da57600080fd5b50356001600160a01b03166103fe565b6000809091565b600154600160c01b900463ffffffff1690565b600061020f82610508565b92915050565b61021d610535565b6000546001600160a01b0390811691161461027f576040805162461bcd60e51b815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604482015290519081900360640190fd5b600080546040516001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a3600080546001600160a01b0319169055565b6000806102d4610539565b63ffffffff818116600081815260036020526040808220805463ffffffff19164395861617905551939550919350339290917fcf635b20f2defc1e71326dc4f0b616fa676e29a5bae87da19fcaddc550b33f0391a39091565b6000546001600160a01b031690565b600154600160a01b900463ffffffff1681565b600061035a82610508565b6103ab576040805162461bcd60e51b815260206004820152601f60248201527f524e47426c6f636b686173682f726571756573742d696e636f6d706c65746500604482015290519081900360640190fd5b63ffffffff82166000908152600260205260409020546103d6576103d6826103d1610590565b6107a8565b5063ffffffff1660009081526002602052604090205490565b6001546001600160a01b031681565b610406610535565b6000546001600160a01b03908116911614610468576040805162461bcd60e51b815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572604482015290519081900360640190fd5b6001600160a01b0381166104ad5760405162461bcd60e51b81526004018080602001828103825260268152602001806108a46026913960400191505060405180910390fd5b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a3600080546001600160a01b0319166001600160a01b0392909216919091179055565b60015463ffffffff9182166000908152600360205260409020548216600160a01b90910482160116431190565b3390565b600180546000916105639161055e9163ffffffff600160c01b9092048216916107f916565b61085a565b6001805463ffffffff60c01b1916600160c01b63ffffffff93841681029190911791829055900416919050565b60015460408051633073c6eb60e01b815263ffffffff600160a01b8404164303600482015290516000926060926001600160a01b0390911691633073c6eb916024808201928792909190829003018186803b1580156105ee57600080fd5b505afa158015610602573d6000803e3d6000fd5b505050506040513d6000823e601f3d908101601f19168201604052602081101561062b57600080fd5b810190808051604051939291908464010000000082111561064b57600080fd5b90830190602082018581111561066057600080fd5b825164010000000081118282018810171561067a57600080fd5b82525081516020918201929091019080838360005b838110156106a757818101518382015260200161068f565b50505050905090810190601f1680156106d45780820380516001836020036101000a031916815260200191505b50604052505050905060006002826040518082805190602001908083835b602083106107115780518252601f1990920191602091820191016106f2565b51815160209384036101000a60001901801990921691161790526040519190930194509192505080830381855afa158015610750573d6000803e3d6000fd5b5050506040513d602081101561076557600080fd5b505160015460408051602080820194909452600160a01b90920463ffffffff16430340828201528051808303820181526060909201905280519101209392505050565b63ffffffff8216600081815260026020908152604091829020849055815184815291517f629394f18de7accce1179c28c39be59503a57cbcf45980a2772743b041b362719281900390910190a25050565b600082820183811015610853576040805162461bcd60e51b815260206004820152601b60248201527f536166654d6174683a206164646974696f6e206f766572666c6f770000000000604482015290519081900360640190fd5b9392505050565b6000640100000000821061089f5760405162461bcd60e51b81526004018080602001828103825260268152602001806108ca6026913960400191505060405180910390fd5b509056fe4f776e61626c653a206e6577206f776e657220697320746865207a65726f206164647265737353616665436173743a2076616c756520646f65736e27742066697420696e2033322062697473a2646970667358221220c320ddb09c4f085cb52958d50d1475b1cefa2025259a2bf5f19f0a043fab442264736f6c63430006060033",
-    "devdoc": {
-      "methods": {
-        "isRequestComplete(uint32)": {
-          "details": "For time-delayed requests, this function is used to check/confirm completion",
-          "params": {
-            "requestId": "The ID of the request used to get the results of the RNG service"
-          },
-          "returns": {
-            "isCompleted": "True if the request has completed and a random number is available, false otherwise"
-          }
-        },
-        "owner()": {
-          "details": "Returns the address of the current owner."
-        },
-        "randomNumber(uint32)": {
-          "params": {
-            "requestId": "The ID of the request used to get the results of the RNG service"
-          },
-          "returns": {
-            "randomNum": "The random number"
-          }
-        },
-        "renounceOwnership()": {
-          "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
-        },
-        "requestRandomNumber()": {
-          "details": "Some services will complete the request immediately, others may have a time-delaySome services require payment in the form of a token, such as $LINK for Chainlink VRF",
-          "returns": {
-            "lockBlock": "The block number at which the RNG service will start generating time-delayed randomness.  The calling contract should \"lock\" all activity until the result is available via the `requestId`",
-            "requestId": "The ID of the request used to get the results of the RNG service"
-          }
-        },
-        "transferOwnership(address)": {
-          "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
-        }
-      }
-    },
-    "userdoc": {
-      "methods": {
-        "constructor": "Public constructor",
-        "getLastRequestId()": {
-          "notice": "Gets the last request id used by the RNG service"
-        },
-        "getRequestFee()": {
-          "notice": "Gets the Fee for making a Request against an RNG service"
-        },
-        "isRequestComplete(uint32)": {
-          "notice": "Checks if the request for randomness from the 3rd-party service has completed"
-        },
-        "randomNumber(uint32)": {
-          "notice": "Gets the random number produced by the 3rd-party service"
-        },
-        "requestRandomNumber()": {
-          "notice": "Sends a request for a random number to the 3rd-party service"
-        }
-      }
-    },
-    "storageLayout": {
-      "storage": [
-        {
-          "astId": 437,
-          "contract": "contracts/RNGBlockhash.sol:RNGBlockhash",
-          "label": "_owner",
-          "offset": 0,
-          "slot": "0",
-          "type": "t_address"
-        },
-        {
-          "astId": 1868,
-          "contract": "contracts/RNGBlockhash.sol:RNGBlockhash",
-          "label": "blockHeaderContract",
-          "offset": 0,
-          "slot": "1",
-          "type": "t_contract(IBlockHeaderPrecompiledContract)1846"
-        },
-        {
-          "astId": 1871,
-          "contract": "contracts/RNGBlockhash.sol:RNGBlockhash",
-          "label": "confirmations",
-          "offset": 20,
-          "slot": "1",
-          "type": "t_uint32"
-        },
-        {
-          "astId": 1873,
-          "contract": "contracts/RNGBlockhash.sol:RNGBlockhash",
-          "label": "requestCount",
-          "offset": 24,
-          "slot": "1",
-          "type": "t_uint32"
-        },
-        {
-          "astId": 1877,
-          "contract": "contracts/RNGBlockhash.sol:RNGBlockhash",
-          "label": "randomNumbers",
-          "offset": 0,
-          "slot": "2",
-          "type": "t_mapping(t_uint32,t_uint256)"
-        },
-        {
-          "astId": 1881,
-          "contract": "contracts/RNGBlockhash.sol:RNGBlockhash",
-          "label": "requestLockBlock",
-          "offset": 0,
-          "slot": "3",
-          "type": "t_mapping(t_uint32,t_uint32)"
-        }
-      ],
-      "types": {
-        "t_address": {
-          "encoding": "inplace",
-          "label": "address",
-          "numberOfBytes": "20"
-        },
-        "t_contract(IBlockHeaderPrecompiledContract)1846": {
-          "encoding": "inplace",
-          "label": "contract IBlockHeaderPrecompiledContract",
-          "numberOfBytes": "20"
-        },
-        "t_mapping(t_uint32,t_uint256)": {
-          "encoding": "mapping",
-          "key": "t_uint32",
-          "label": "mapping(uint32 => uint256)",
-          "numberOfBytes": "32",
-          "value": "t_uint256"
-        },
-        "t_mapping(t_uint32,t_uint32)": {
-          "encoding": "mapping",
-          "key": "t_uint32",
-          "label": "mapping(uint32 => uint32)",
-          "numberOfBytes": "32",
-          "value": "t_uint32"
-        },
-        "t_uint256": {
-          "encoding": "inplace",
-          "label": "uint256",
-          "numberOfBytes": "32"
-        },
-        "t_uint32": {
-          "encoding": "inplace",
-          "label": "uint32",
-          "numberOfBytes": "4"
-        }
-      }
-    },
-    "gasEstimates": {
-      "creation": {
-        "codeDepositCost": "468200",
-        "executionCost": "infinite",
-        "totalCost": "infinite"
       },
-      "external": {
-        "blockHeaderContract()": "1103",
-        "confirmations()": "1052",
-        "getLastRequestId()": "1053",
-        "getRequestFee()": "250",
-        "isRequestComplete(uint32)": "2061",
-        "owner()": "1037",
-        "randomNumber(uint32)": "infinite",
-        "renounceOwnership()": "24271",
-        "requestRandomNumber()": "infinite",
-        "transferOwnership(address)": "infinite"
+      "owner()": {
+        "details": "Returns the address of the current owner."
       },
-      "internal": {
-        "_getNextRequestId()": "infinite",
-        "_getSeed()": "infinite",
-        "_isRequestComplete(uint32)": "1745",
-        "_storeResult(uint32,uint256)": "infinite"
+      "randomNumber(uint32)": {
+        "params": {
+          "requestId": "The ID of the request used to get the results of the RNG service"
+        },
+        "returns": {
+          "randomNum": "The random number"
+        }
+      },
+      "renounceOwnership()": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+      },
+      "requestRandomNumber()": {
+        "details": "Some services will complete the request immediately, others may have a time-delaySome services require payment in the form of a token, such as $LINK for Chainlink VRF",
+        "returns": {
+          "lockBlock": "The block number at which the RNG service will start generating time-delayed randomness.  The calling contract should \"lock\" all activity until the result is available via the `requestId`",
+          "requestId": "The ID of the request used to get the results of the RNG service"
+        }
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
       }
     }
+  },
+  "userdoc": {
+    "methods": {
+      "constructor": "Public constructor",
+      "getLastRequestId()": {
+        "notice": "Gets the last request id used by the RNG service"
+      },
+      "getRequestFee()": {
+        "notice": "Gets the Fee for making a Request against an RNG service"
+      },
+      "isRequestComplete(uint32)": {
+        "notice": "Checks if the request for randomness from the 3rd-party service has completed"
+      },
+      "randomNumber(uint32)": {
+        "notice": "Gets the random number produced by the 3rd-party service"
+      },
+      "requestRandomNumber()": {
+        "notice": "Sends a request for a random number to the 3rd-party service"
+      }
+    }
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 437,
+        "contract": "contracts/RNGBlockhash.sol:RNGBlockhash",
+        "label": "_owner",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 1868,
+        "contract": "contracts/RNGBlockhash.sol:RNGBlockhash",
+        "label": "blockHeaderContract",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_contract(IBlockHeaderPrecompiledContract)1846"
+      },
+      {
+        "astId": 1871,
+        "contract": "contracts/RNGBlockhash.sol:RNGBlockhash",
+        "label": "confirmations",
+        "offset": 20,
+        "slot": "1",
+        "type": "t_uint32"
+      },
+      {
+        "astId": 1873,
+        "contract": "contracts/RNGBlockhash.sol:RNGBlockhash",
+        "label": "requestCount",
+        "offset": 24,
+        "slot": "1",
+        "type": "t_uint32"
+      },
+      {
+        "astId": 1877,
+        "contract": "contracts/RNGBlockhash.sol:RNGBlockhash",
+        "label": "randomNumbers",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_mapping(t_uint32,t_uint256)"
+      },
+      {
+        "astId": 1881,
+        "contract": "contracts/RNGBlockhash.sol:RNGBlockhash",
+        "label": "requestLockBlock",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_mapping(t_uint32,t_uint32)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_contract(IBlockHeaderPrecompiledContract)1846": {
+        "encoding": "inplace",
+        "label": "contract IBlockHeaderPrecompiledContract",
+        "numberOfBytes": "20"
+      },
+      "t_mapping(t_uint32,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_uint32",
+        "label": "mapping(uint32 => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_mapping(t_uint32,t_uint32)": {
+        "encoding": "mapping",
+        "key": "t_uint32",
+        "label": "mapping(uint32 => uint32)",
+        "numberOfBytes": "32",
+        "value": "t_uint32"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      },
+      "t_uint32": {
+        "encoding": "inplace",
+        "label": "uint32",
+        "numberOfBytes": "4"
+      }
+    }
+  },
+  "gasEstimates": {
+    "creation": {
+      "codeDepositCost": "500000",
+      "executionCost": "infinite",
+      "totalCost": "infinite"
+    },
+    "external": {
+      "blockHeaderContract()": "1103",
+      "confirmations()": "1052",
+      "getLastRequestId()": "1053",
+      "getRequestFee()": "250",
+      "isRequestComplete(uint32)": "2971",
+      "owner()": "1037",
+      "randomNumber(uint32)": "infinite",
+      "renounceOwnership()": "24271",
+      "requestRandomNumber()": "infinite",
+      "transferOwnership(address)": "infinite"
+    },
+    "internal": {
+      "_getNextRequestId()": "infinite",
+      "_getSeed()": "infinite",
+      "_isRequestComplete(uint32)": "2655",
+      "_storeResult(uint32,uint256)": "infinite"
+    }
   }
+}
