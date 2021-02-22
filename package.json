@@ -19,7 +19,8 @@
     "clean-test": "rm -rf deployments/buidlerevm_31337 test-results.xml",
     "prepack": "rm -rf build cache && buidler compile",
     "etherscan-verify": "buidler etherscan-verify --solc-input --api-key $ETHERSCAN_API_KEY --network",
-    "postpublish": "PACKAGE_VERSION=$(./scripts/package-version.sh) && git tag -ae v$PACKAGE_VERSION && git push --tags"
+    "postpublish": "PACKAGE_VERSION=$(./scripts/package-version.sh) && git tag -ae v$PACKAGE_VERSION && git push --tags",
+    "flatten": "npx waffle flatten"
   },
   "dependencies": {},
   "devDependencies": {
